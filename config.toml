@@ -1,0 +1,25 @@
+# CGV 예매 오픈 알리미 설정
+# 이 파일을 복사해 config.toml 로 저장한 뒤 수정하세요.
+
+[watch]
+theater = "여의도"                 # CGV 극장 이름 (사이트 표기 그대로)
+theater_code = "0112"              # 극장 코드. 비워 두면 이름으로 자동 검색
+movie_keywords = ["진격의 거인", "홍련"]   # 영화 제목에 모두 포함되어야 하는 단어 (띄어쓰기 무시)
+formats = ["4DX"]                  # 상영관 포맷 (예: "4DX", "IMAX", "SCREENX", "DOLBY"). 비우면 전체
+dates = ["20261028"]               # 감시할 상영일 (YYYYMMDD, 여러 개 가능)
+interval_sec = 120                 # 조회 간격(초). 최소 60초로 제한됨
+
+[notify]
+# 아래 중 하나 이상 설정. 모두 비우면 콘솔 출력 + 윈도우 알림음만 동작합니다.
+
+# 1) ntfy: 휴대폰에 'ntfy' 앱 설치 → 아래와 같은 주제명을 구독 (가입 불필요, 남이 추측하기 어려운 이름 권장)
+ntfy_topic = "cgv-jch-8f3k2"                    # 예: "cgv-jch-8f3k2"
+
+# 2) 텔레그램 봇
+telegram_token = ""
+telegram_chat_id = ""
+
+# 3) 디스코드 웹훅
+discord_webhook = ""
+
+beep = true                        # 윈도우에서 알림음 재생
